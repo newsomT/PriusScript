@@ -4,7 +4,7 @@ Shell script to install a [Nodex Masternode]() on a Linux server running Ubuntu 
 
 ## Installation
 ```
-wget -q https://raw.githubusercontent.com/HashGravy/MN-Script/master/install_enox.sh
+wget -q https://raw.githubusercontent.com/HashGravy/MN-Script/master/install_nodex.sh
 bash install_nodex.sh
 ```
 
