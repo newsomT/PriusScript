@@ -56,7 +56,7 @@ if [[ $DOSETUP =~ "y" ]] ; then
 fi
 
 git clone https://github.com/HashGravy/Nodex
-cd nodex
+cd Nodex
 ./autogen.sh
 ./configure
 make
