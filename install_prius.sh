@@ -4,7 +4,7 @@ cd ~
 echo "****************************************************************************"
 echo "* Ubuntu 16.04 is the recommended opearting system for this install.       *"
 echo "*                                                                          *"
-echo "* This script will install and configure your nodex masternodes.      *"
+echo "* This script will install and configure your prius masternodes.      *"
 echo "****************************************************************************"
 echo && echo && echo
 echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
@@ -55,8 +55,8 @@ if [[ $DOSETUP =~ "y" ]] ; then
   source ~/.bashrc
 fi
 
-git clone https://github.com/HashGravy/Nodex
-cd Nodex
+git clone https://github.com/newsomT/PriusProject
+cd Prius
 ./autogen.sh
 ./configure
 make
@@ -71,9 +71,9 @@ echo ""
 echo "Enter masternode private key for node $ALIAS"
 read PRIVKEY
 
-CONF_DIR=~/.nodex/
-CONF_FILE=nodex.conf
-PORT=11220
+CONF_DIR=~/.prius/
+CONF_FILE=prius.conf
+PORT=12881
 
 mkdir -p $CONF_DIR
 echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` >> $CONF_DIR/$CONF_FILE
@@ -90,4 +90,4 @@ echo "mastenodeaddr=$IP:$PORT" >> $CONF_DIR/$CONF_FILE
 echo "masternodeprivkey=$PRIVKEY" >> $CONF_DIR/$CONF_FILE
 sudo ufw allow $PORT/tcp
 
-nodexd -daemon
+priusd -daemon
