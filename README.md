@@ -4,7 +4,7 @@ Shell script to install a [Prius Masternode]() on a Linux server running Ubuntu 
 
 ## Installation
 ```
-wget -q https://raw.githubusercontent.com/newsomT/MN-Script/master/install_prius.sh
+wget -q https://raw.githubusercontent.com/newsomT/PriusScript/master/install_prius.sh
 bash install_prius.sh
 ```
 
